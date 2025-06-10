@@ -14,10 +14,10 @@ int main() {
     */
     const  uint32_t SIZE_OF_SRAM1 = ((SRAM1_END - SRAM1_START) + 1);
     //get the SRAM2 peripheral starting address. 
-    const uint32_t START_ADDRESS_OF_SRAM2 = SRAM1_END + 1;
+    const uint32_t START_ADDRESS_OF_SRAM2 = SRAM1_START + SIZE_OF_SRAM1;
     //print the size in decimal(KILOBYTES) & the starting address of SRAM2
-    printf("Size of SRAM1: %d (KB)", SIZE_OF_SRAM1/1024);
-    printf("start address of SRAM2:  0x%x",START_ADDRESS_OF_SRAM2);
+    printf("Size of SRAM1: %d (KB)\n", SIZE_OF_SRAM1/1024);
+    printf("Starting address of SRAM2: 0x%x\n",START_ADDRESS_OF_SRAM2);
     return 0; 
 
 } 
